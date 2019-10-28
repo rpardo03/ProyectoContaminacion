@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contaminación Araucanía</title>
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="stylesheet" href="CSS/ChartPage.css">
+</head>
+
+<body>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark">
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+                <li>
+                    <a class="navbar-brand" href="#">Página Principal</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Anexos <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Proyecto Smart City In a Box</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="SeleccionDeParametros">
+        <div class="card border-0" style="height: 785px;">
+            <img src="img/CharPage.jpg" class="card-img-top " style="position: absolute" height="785px">
+            <div class="container" style="margin-top: 8%; ">
+                <div class="row border border-dark rounded"
+                    style="padding: 5%; margin-top: 2%;color: white;background: rgba(34,34,34,0.75);position: relative;">
+                    <div class="col-md-8 ">
+                        <h3>Seleccione el rango de tiempo en el que quiere generar el gráfico:</h3>
+                    </div>
+                    <div class="col-md-4" style="margin-top: 3%">
+                        <select class="select-css" name="FranjaHoraria">
+                            <option>Hora</option>
+                            <option>Día</option>
+                            <option>Semana</option>
+                            <option>Mes</option>
+                            <option>Año</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid border border-dark rounded "
+                style="padding: 3%; margin-top:2%;background: rgba(34,34,34,0.75);position: relative;">
+                <div class="row " style="margin-left: 8%">
+                    <div class="col-md-2">
+                        <h6>Seleccione el año:</h6>
+                        <select class="select-css" name="SeleccionAño">
+                            <option>Hora</option>
+                            <option>Día</option>
+                            <option>Semana</option>
+                            <option>Mes</option>
+                            <option>Año</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <h6>Seleccione el mes:</h6>
+                        <select class="select-css" name="SeleccionMes">
+                            <option>Hora</option>
+                            <option>Día</option>
+                            <option>Semana</option>
+                            <option>Mes</option>
+                            <option>Año</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <h6>Seleccione la semana:</h6>
+                        <select class="select-css" name="SeleccionSemana">
+                            <option>Hora</option>
+                            <option>Día</option>
+                            <option>Semana</option>
+                            <option>Mes</option>
+                            <option>Año</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <h6>Seleccione el día:</h6>
+                        <select class="select-css" name="SeleccionDia">
+                            <option>Hora</option>
+                            <option>Día</option>
+                            <option>Semana</option>
+                            <option>Mes</option>
+                            <option>Año</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <h6>Seleccione la hora:</h6>
+                        <select class="select-css" name="SeleccionHora">
+                            <option>Hora</option>
+                            <option>Día</option>
+                            <option>Semana</option>
+                            <option>Mes</option>
+                            <option>Año</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="button" align="center" style="margin-top: 3%">
+                <button type="button" class="btn btn-primary btn-lg btn-dark " style="position: relative;">Desplegar
+                    Gráfico</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="Grafico">
+        <div class="datosGrafico container" style="margin-top: 0%">
+            <div class="row" style="height: 110px;">
+                <div class="col-md-4 ">
+                    <div class="separadores border">
+                        <h5>Sector</h5>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="separadores border ">
+                        <h5>PM 2.5</h5>
+                    </div>
+                </div>
+                <div class="col-md-4  ">
+                    <div class="separadores border">
+                        <h5>PM 10</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grafico container-fluid" style="padding: 0%">
+            <div class="row" style="padding: 0%">
+                <div class="col-md-8" style="padding: 1%">
+                    <div class="dondeVaElGrafico ml-1">
+                        <img src="img/grafico2.png" class="imgGrafico img-fluid" alt="Responsive image">
+                    </div>
+                </div>
+                <div class="col-md-4" style="padding: 1%">
+                    <div class="contenedor-right" align="center">
+                        <div class="panelImeca border" >
+                            <img src="img/imecas3.png" class="imgImeca img-fluid" alt="Responsive image">
+                        </div>
+                    </div>
+                    <div class="container mt-3">
+                        <div class="row">
+                            <div class="col-md-6 " style="padding: 0%;">
+                                <div class="separador2 border" style="margin-left: 25%;">
+                                    <h5>Temperatura</h5>
+                                </div>
+                            </div>
+                            <div class="col-md-6" style="padding: 0%;">
+                                <div class="separador2 border ">
+                                    <h5>Humedad</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="button" align="center" style="margin-top: 13%">
+                        <button type="button" class="btn btn-primary btn-lg btn-dark ">Exportar Gráfico</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <div class="container text-dark">
+            <div class="textoAutores" style="padding: 3%" align="center">
+                <ul style="list-style: none;">
+                    <li>¿Quienes Somos?</li>
+                    <li>Autores: Rodrigo Pardo, Gilio Linfati y Jonathan Lizama</li>
+                    <li>Universidad de la Frontera</li>
+                    <li>Departamento de Ciencias e Informática.</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
