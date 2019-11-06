@@ -26,6 +26,11 @@ public class Registro {
         this.hora = hora;
     }
 
+    @Override
+    public String toString() {
+        return "Sector:" + sector + " Dispositivo:" + idSensor + " Fecha:" + fecha + " Hora:" + hora + " PM10:" + pm10 + " PM2.5:" + pm25 + " Humedad:" + humedad + " Temperatura:" + temperatura;
+    }
+
     public String getSector() {
         return sector;
     }
