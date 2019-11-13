@@ -21,27 +21,12 @@ public class Controlador {
 
     @RequestMapping("/ChartPage")
     public String mostrarPaginaGrafico(Model model) {
+        GestorRegistro gr = new GestorRegistro("src/archivos/csv.csv");
+        List<DatoJSON> datos = gr.enviarDatosAlGrafico(gr.buscarDatosSolicitados("30-04-2019", "16:00:00 - 17:00:00"));
+        Treemap tree = new Treemap(datos);
+        model.addAttribute("data", tree);
         return "ChartPage";
     }
 
-
-    @RequestMapping("/treemap")
-    public String mostrarTreemap(Model model) {
-        //GestorRegistro gr = new GestorRegistro("src/archivos/csv.csv");
-        //Treemap tree = new Treemap(gr.enviarDatosAlGrafico(gr.buscarDatosSolicitados("01-08-2019", "4:00:00 - 5:00:00")));
-        List<DatoJSON> datos = new ArrayList<>();
-        datos.add(new DatoJSON("Amanecer", 30));
-        datos.add(new DatoJSON("labranza", 70));
-        datos.add(new DatoJSON("centro", 100));
-        Treemap tree = new Treemap(datos);
-        model.addAttribute("data", tree);
-        return "TreemapJSON";
-    }
-
-
-    @RequestMapping("/treemapJSON2")
-    public String mostrarPaginaGraficoJSON(Model model) {
-        return "TreemapJSON";
-    }
 
 }

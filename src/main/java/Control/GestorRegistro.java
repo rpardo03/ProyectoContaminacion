@@ -28,15 +28,6 @@ public class GestorRegistro {
         return datosSolicitados;
     }
 
-    //envia los datos en forma de csv;
-    public String enviarDatosAlGraficoCSV(ArrayList<Registro> datosParaEnviar) {
-        String csv = "sector,parent,pm25" + "\n" + "Origin,," + "\n";
-        for (int i = 0; i < datosParaEnviar.size(); i++) {
-            csv += datosParaEnviar.get(i).getSector() + "," + "origin" + "," + datosParaEnviar.get(i).getPm25() + "\n";
-        }
-        return csv;
-    }
-
 
     public List<DatoJSON> enviarDatosAlGrafico(ArrayList<Registro> datosParaEnviar) {
         List<DatoJSON> enviar = new ArrayList<>();

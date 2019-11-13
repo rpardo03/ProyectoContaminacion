@@ -10,8 +10,13 @@
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://d3js.org/d3.v4.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
     <link rel="stylesheet" href="CSS/ChartPage.css">
+    <script th:inline="javascript">
+        var datos = [[${ data }]];
+    </script>
+    
 </head>
 
 <body>
@@ -111,8 +116,8 @@
                 </div>
             </div>
             <div class="button" align="center" style="margin-top: 3%">
-                <button type="button" class="btn btn-primary btn-lg btn-dark " style="position: relative;">Desplegar
-                    Gráfico</button>
+                <a class="btn btn-primary btn-lg btn-dark " style="position: relative;"
+                    onclick="generarGrafico(datos)">Desplegar Gráfico</a>
             </div>
         </div>
     </section>
@@ -123,11 +128,13 @@
                 <div class="col-md-4 ">
                     <div class="separadores border">
                         <h5>Sector</h5>
+                        <h5 id="sector"></h5>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="separadores border ">
                         <h5>PM 2.5</h5>
+                        <h5 id="pm25"></h5>
                     </div>
                 </div>
                 <div class="col-md-4  ">
@@ -139,14 +146,14 @@
         </div>
         <div class="grafico container-fluid" style="padding: 0%">
             <div class="row" style="padding: 0%">
-                <div class="col-md-8" style="padding: 1%">
-                    <div class="dondeVaElGrafico ml-1">
-                        <img src="img/grafico2.png" class="imgGrafico img-fluid" alt="Responsive image">
+                <div class="col-md-8">
+                    <div class="dondeVaElGrafico ml-3" id="treemapContenedor">
+
                     </div>
                 </div>
                 <div class="col-md-4" style="padding: 1%">
                     <div class="contenedor-right" align="center">
-                        <div class="panelImeca border" >
+                        <div class="panelImeca border">
                             <img src="img/imecas3.png" class="imgImeca img-fluid" alt="Responsive image">
                         </div>
                     </div>
@@ -164,8 +171,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="button" align="center" style="margin-top: 13%">
-                        <button type="button" class="btn btn-primary btn-lg btn-dark ">Exportar Gráfico</button>
+                    <div class="button" align="center" href="#" style="margin-top: 13%; color: white;">
+                        <a class="btn btn-primary btn-lg btn-dark">Exportar Gráfico</a>
                     </div>
                 </div>
             </div>
@@ -194,6 +201,102 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+
+    <script>
+        function generarGrafico(datosFinales) {
+            // set the dimensions and margins of the graph
+            var margin = { top: 10, right: 10, bottom: 10, left: 10 },
+                width = 1200 - margin.left - margin.right,
+                height = 660 - margin.top - margin.bottom;
+
+            // append the svg object to the body of the page
+            var svg = d3.select("#treemapContenedor")
+                .append("svg")
+                .attr("width", width + margin.left + margin.right)
+                .attr("height", height + margin.top + margin.bottom)
+                .append("g")
+                .attr("transform",
+                    "translate(" + margin.left + "," + margin.top + ")");
+
+
+            // Give the data to this cluster layout:
+            var root = d3.hierarchy(datosFinales).sum(function (d) { return d.value }) // Here the size of each leave is given in the 'value' field in input data
+
+            // Then d3.treemap computes the position of each element of the hierarchy
+            d3.treemap()
+                .size([width, height])
+                .paddingTop(28)
+                .paddingRight(7)
+                .paddingInner(4)      // Padding between each rectangle
+                //.paddingOuter(6)
+                //.padding(20)
+                (root)
+
+            // prepare a color scale
+            var color = d3.scaleOrdinal()
+                .range(["#402D54", "#D18975", "#8FD175", "red", "blue", "black", "grey"])
+
+
+
+            // use this information to add rectangles:
+            svg
+                .selectAll("rect")
+                .data(root.leaves())
+                .enter()
+                .append("rect")
+                .attr('x', function (d) { return d.x0; })
+                .attr('y', function (d) { return d.y0; })
+                .attr('width', function (d) { return d.x1 - d.x0; })
+                .attr('height', function (d) { return d.y1 - d.y0; })
+                .style("stroke", "black")
+                .style("fill", function (d) { return color(d.data.name) })
+
+            // and to add the text labels
+            svg
+                .selectAll("text")
+                .data(root.leaves())
+                .enter()
+                .append("text")
+                .attr("x", function (d) { return d.x0 + 5 })    // +10 to adjust position (more right)
+                .attr("y", function (d) { return d.y0 + 20 })    // +20 to adjust position (lower)
+                .text(function (d) { return d.data.name })
+                .attr("font-size", "25px")
+                .attr("fill", "white")
+
+            // and to add the text labels
+            svg
+                .selectAll("vals")
+                .data(root.leaves())
+                .enter()
+                .append("text")
+                .attr("x", function (d) { return d.x0 + 5 })    // +10 to adjust position (more right)
+                .attr("y", function (d) { return d.y0 + 35 })    // +20 to adjust position (lower)
+                .text(function (d) { return d.data.value })
+                .attr("font-size", "22px")
+                .attr("fill", "white")
+
+
+            // Add title for the 3 groups
+            svg
+                .append("text")
+                .attr("x", 0)
+                .attr("y", 14)    // +20 to adjust position (lower)
+                .text("Sectores registrados en la fecha:08-01-2019")
+                .attr("font-size", "19px")
+                .attr("fill", "grey")
+
+            'use strict';
+            d3.selectAll("rect").data(root.leaves()).attr("transition", "all 0.2s ease").on("click", function (d) {
+                var sectorVAR = d.data.name;
+                var pm25VAR = d.data.value;
+                document.getElementById("sector").innerHTML = sectorVAR;
+                document.getElementById("pm25").innerHTML = pm25VAR;
+                d3.select(this).style("transition", "all 0.2s ease");
+                d3.select(this).style("box-shadow", "0 4px 16px rgba(49, 138, 172, 1)");
+
+            });
+        }
+    </script>
 </body>
 
 </html>

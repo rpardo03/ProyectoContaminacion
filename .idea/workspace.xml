@@ -2,54 +2,74 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d452d828-cd82-4850-8718-6a2f449f1ceb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/src/archivos/csv.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/src/archivos/modelo ProyectoContaminacion.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/src/archivos/modeloBaseDatos.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/src/main/java/Control/Controlador.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/src/main/java/Control/GestorArchivo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/src/main/java/Control/GestorRegistro.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/src/main/java/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/src/main/java/Modelo/BaseDatoSQL.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/src/main/java/Modelo/DatoJSON.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/src/main/java/Modelo/Registro.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/src/main/java/Modelo/Treemap.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/src/main/resources/static/CSS/ChartPage.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/src/main/resources/static/CSS/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/src/main/resources/static/img/CharPage.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/src/main/resources/static/img/background-1747786.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/src/main/resources/static/img/business-2089534.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/src/main/resources/static/img/contaminacion.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/src/main/resources/static/img/grafico.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/src/main/resources/static/img/grafico2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/src/main/resources/static/img/grafico3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/src/main/resources/static/img/header.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/src/main/resources/static/img/imecas.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/src/main/resources/static/img/imecas2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/src/main/resources/static/img/imecas3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/src/main/resources/static/img/logoUfro.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/src/main/resources/templates/ChartPage.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/src/main/resources/templates/PaginaPrincipal.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/src/main/resources/templates/TreemapCust.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/target/classes/Control/Controlador.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/target/classes/Control/GestorArchivo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/target/classes/Control/GestorRegistro.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/target/classes/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/target/classes/Modelo/BaseDatoSQL.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/target/classes/Modelo/DatoJSON.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/target/classes/Modelo/Registro.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/target/classes/Modelo/Treemap.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/target/classes/static/CSS/ChartPage.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/target/classes/static/CSS/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/target/classes/static/img/CharPage.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/target/classes/static/img/background-1747786.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/target/classes/static/img/business-2089534.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/target/classes/static/img/contaminacion.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/target/classes/static/img/grafico.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/target/classes/static/img/grafico2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/target/classes/static/img/grafico3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/target/classes/static/img/header.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/target/classes/static/img/imecas.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/target/classes/static/img/imecas2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/target/classes/static/img/imecas3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/target/classes/static/img/logoUfro.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/target/classes/templates/ChartPage.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/target/classes/templates/PaginaPrincipal.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/target/classes/templates/TreemapCust.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Control/Controlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Control/Controlador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Control/GestorArchivo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Control/GestorArchivo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Control/GestorRegistro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Control/GestorRegistro.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Modelo/BaseDatoSQL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Modelo/BaseDatoSQL.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Modelo/Registro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Modelo/Registro.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/CSS/ChartPage.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/CSS/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Modelo/Treemap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Modelo/Treemap.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/ChartPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/ChartPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/PaginaPrincipal.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/PaginaPrincipal.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/img/CharPage.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/img/background-1747786.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/img/business-2089534.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/img/contaminacion.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/img/grafico.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/img/grafico2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/img/grafico3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/img/header.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/img/imecas.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/img/imecas2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/img/imecas3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/img/logoUfro.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/Treemap.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/TreemapJSON.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Control/Controlador.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Control/Controlador.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Control/GestorArchivo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Control/GestorArchivo.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Control/GestorRegistro.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Control/GestorRegistro.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Modelo/BaseDatoSQL.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Modelo/BaseDatoSQL.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Modelo/Registro.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Modelo/Registro.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/CSS/ChartPage.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/CSS/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Modelo/Treemap.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Modelo/Treemap.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/ChartPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/ChartPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/PaginaPrincipal.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/PaginaPrincipal.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/img/CharPage.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/img/background-1747786.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/img/business-2089534.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/img/contaminacion.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/img/grafico.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/img/grafico2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/img/grafico3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/img/header.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/img/imecas.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/img/imecas2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/img/imecas3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/img/logoUfro.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/Treemap.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/TreemapJSON.html" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
