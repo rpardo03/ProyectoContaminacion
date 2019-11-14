@@ -9,6 +9,9 @@ public class GestorRegistro {
 
     private ArrayList<Registro> registros;
 
+    public GestorRegistro() {
+    }
+
     public GestorRegistro(String ruta) {
         this.registros = agregarRegistrosNuevos(ruta);
     }
@@ -16,6 +19,17 @@ public class GestorRegistro {
     private ArrayList<Registro> agregarRegistrosNuevos(String ruta) {
         GestorArchivo ga = new GestorArchivo();
         return ga.agruparRegistrosPorHora(ga.leerArchivo(ruta));
+    }
+
+    public boolean buscarDatos(String fecha, String rangoHorario , ArrayList<Registro> datos) {
+        ArrayList<Registro> datosSolicitados = new ArrayList<>();
+        for (int i = 0; i < datos.size(); i++) {
+            if (datos.get(i).getFecha().equals(fecha) && datos.get(i).getHora().equals(rangoHorario)) {
+                datosSolicitados.add(datos.get(i));
+            }
+            return false;
+        }
+        return true;
     }
 
     public ArrayList<Registro> buscarDatosSolicitados(String fecha, String rangoHorario) {

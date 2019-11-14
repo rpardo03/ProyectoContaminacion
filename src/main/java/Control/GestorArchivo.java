@@ -106,12 +106,17 @@ public class GestorArchivo {
         return (sumaTemp / rMismaHora.size());
     }
 
-    private double promediarHumedad(ArrayList<Registro> rMismaHora) {
+    public double promediarHumedad(ArrayList<Registro> rMismaHora) {
         double sumaHum = 0.0;
-        for (int i = 0; i < rMismaHora.size(); i++) {
-            sumaHum = sumaHum + rMismaHora.get(i).getHumedad();
+        try {
+            for (int i = 0; i < rMismaHora.size(); i++) {
+                sumaHum = sumaHum + rMismaHora.get(i).getHumedad();
+            }
+            return sumaHum / rMismaHora.size();
+        } catch (Exception e) {
+            System.out.println("No se puede dividir por cero");
+            return 0.0;
         }
-        return sumaHum / rMismaHora.size();
     }
 
     public ArrayList<Registro> leerArchivo(String ruta) {
@@ -131,13 +136,19 @@ public class GestorArchivo {
             fileReader.close();
         } catch (IOException e) {
             System.out.println("Archivo no encontrado.");
+            return null;
         }
         return registros;
     }
 
-    private Registro crearRegistro(String linea) {
-        String datos[] = arreglarLinea(linea).split(";");
-        return new Registro(datos[0], Integer.parseInt(datos[1]), datos[2], datos[3], Double.parseDouble(datos[4]), Double.parseDouble(datos[5]), Double.parseDouble(datos[7]), Double.parseDouble(datos[6]));
+    public Registro crearRegistro(String linea) {
+        try {
+            String datos[] = arreglarLinea(linea).split(";");
+            return new Registro(datos[0], Integer.parseInt(datos[1]), datos[2], datos[3], Double.parseDouble(datos[4]), Double.parseDouble(datos[5]), Double.parseDouble(datos[7]), Double.parseDouble(datos[6]));
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("La linea esta vacia");
+            return null;
+        }
     }
 
     private String arreglarLinea(String linea) {
