@@ -2,76 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d452d828-cd82-4850-8718-6a2f449f1ceb" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/src/archivos/csv.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/src/archivos/modelo ProyectoContaminacion.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/src/archivos/modeloBaseDatos.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/src/main/java/Control/Controlador.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/src/main/java/Control/GestorArchivo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/src/main/java/Control/GestorRegistro.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/src/main/java/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/src/main/java/Modelo/BaseDatoSQL.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/src/main/java/Modelo/DatoJSON.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/src/main/java/Modelo/Registro.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/src/main/java/Modelo/Treemap.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/src/main/resources/static/CSS/ChartPage.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/src/main/resources/static/CSS/main.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/src/main/resources/static/img/CharPage.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/src/main/resources/static/img/background-1747786.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/src/main/resources/static/img/business-2089534.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/src/main/resources/static/img/contaminacion.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/src/main/resources/static/img/grafico.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/src/main/resources/static/img/grafico2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/src/main/resources/static/img/grafico3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/src/main/resources/static/img/header.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/src/main/resources/static/img/imecas.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/src/main/resources/static/img/imecas2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/src/main/resources/static/img/imecas3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/src/main/resources/static/img/logoUfro.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/src/main/resources/templates/ChartPage.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/src/main/resources/templates/PaginaPrincipal.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/src/main/resources/templates/TreemapCust.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/target/classes/Control/Controlador.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/target/classes/Control/GestorArchivo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/target/classes/Control/GestorRegistro.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/target/classes/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/target/classes/Modelo/BaseDatoSQL.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/target/classes/Modelo/DatoJSON.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/target/classes/Modelo/Registro.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/target/classes/Modelo/Treemap.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/target/classes/static/CSS/ChartPage.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/target/classes/static/CSS/main.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/target/classes/static/img/CharPage.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/target/classes/static/img/background-1747786.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/target/classes/static/img/business-2089534.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/target/classes/static/img/contaminacion.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/target/classes/static/img/grafico.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/target/classes/static/img/grafico2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/target/classes/static/img/grafico3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/target/classes/static/img/header.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/target/classes/static/img/imecas.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/target/classes/static/img/imecas2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/target/classes/static/img/imecas3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/target/classes/static/img/logoUfro.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/target/classes/templates/ChartPage.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/target/classes/templates/PaginaPrincipal.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoContaminacionAraucania/target/classes/templates/TreemapCust.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Control/Controlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Control/Controlador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Control/GestorRegistro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Control/GestorRegistro.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Modelo/Treemap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Modelo/Treemap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/CSS/ChartPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/CSS/ChartPage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/CSS/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/CSS/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/ChartPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/ChartPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/Treemap.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/TreemapJSON.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Control/Controlador.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Control/Controlador.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Control/GestorRegistro.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Control/GestorRegistro.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Modelo/Treemap.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Modelo/Treemap.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/PaginaPrincipal.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/PaginaPrincipal.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/CSS/ChartPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/CSS/ChartPage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/CSS/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/CSS/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/ChartPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/ChartPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/Treemap.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/TreemapJSON.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/PaginaPrincipal.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/PaginaPrincipal.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/GestorRegistroTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/GestorRegistroTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/src/test/java/GestorArchivoTest.class" beforeDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -104,6 +49,11 @@
     <option name="skipTests" value="true" />
   </component>
   <component name="ProjectId" id="1SoeCtNB0daWdWYtnj0OWUXKhol" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.Annotations" value="false" />
@@ -113,7 +63,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/test/java" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../plugins spanish/Spell-Checking-PHPStorm-Spanish-dic-UTF8-master/spanish-utf8.dic" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -138,22 +88,10 @@
       <recent name="C:\Users\Alumno\Desktop\Proyecto Estructura Datos\ProyectoContaminacion\ProyectoContaminacion\src" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="JUnit.GestorRegistroTest">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="ProyectoContaminacionAraucania" />
+      <module name="ProyectoContaminacion" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -255,7 +193,6 @@
       <item itemvalue="JUnit.GestorArchivoTest.testLectura" />
       <item itemvalue="JUnit.GestorArchivoTest.testPromedioHumedad" />
       <item itemvalue="JUnit.GestorArchivoTest.testRegistro" />
-      <item itemvalue="Spring Boot.Main" />
       <item itemvalue="JUnit.GestorRegistroTest.testBusquedaDatos" />
       <item itemvalue="JUnit.GestorRegistroTest" />
     </list>
@@ -268,6 +205,18 @@
         <item itemvalue="JUnit.GestorArchivoTest.testLectura" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SpellCheckerSettings" BundledDictionaries="0" Folders="1" Folder0="C:\Users\Alumno\Desktop\plugins spanish\Spell-Checking-PHPStorm-Spanish-dic-UTF8-master" CustomDictionaries="1" CustomDictionary0="C:\Users\Alumno\Desktop\plugins spanish\Spell-Checking-PHPStorm-Spanish-dic-UTF8-master\spanish-utf8.dic" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="project-level" UseSingleDictionary="true" />
   <component name="SvnConfiguration">
@@ -299,5 +248,31 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="781" y="181" key="#Main" timestamp="1576791826100">
+      <screen x="0" y="20" width="1920" height="1060" />
+    </state>
+    <state x="781" y="181" key="#Main/0.20.1920.1060@0.20.1920.1060" timestamp="1576791826100" />
+    <state x="677" y="171" width="800" height="666" key="#Notifications" timestamp="1576797259686">
+      <screen x="0" y="20" width="1920" height="1060" />
+    </state>
+    <state x="677" y="171" width="800" height="666" key="#Notifications/0.20.1920.1060@0.20.1920.1060" timestamp="1576797259686" />
+    <state width="1383" height="214" key="GridCell.Tab.0.bottom" timestamp="1576797719239">
+      <screen x="0" y="20" width="1920" height="1060" />
+    </state>
+    <state width="1383" height="214" key="GridCell.Tab.0.bottom/0.20.1920.1060@0.20.1920.1060" timestamp="1576797719239" />
+    <state width="1383" height="214" key="GridCell.Tab.0.center" timestamp="1576797719238">
+      <screen x="0" y="20" width="1920" height="1060" />
+    </state>
+    <state width="1383" height="214" key="GridCell.Tab.0.center/0.20.1920.1060@0.20.1920.1060" timestamp="1576797719238" />
+    <state width="1383" height="214" key="GridCell.Tab.0.left" timestamp="1576797719237">
+      <screen x="0" y="20" width="1920" height="1060" />
+    </state>
+    <state width="1383" height="214" key="GridCell.Tab.0.left/0.20.1920.1060@0.20.1920.1060" timestamp="1576797719237" />
+    <state width="1383" height="214" key="GridCell.Tab.0.right" timestamp="1576797719239">
+      <screen x="0" y="20" width="1920" height="1060" />
+    </state>
+    <state width="1383" height="214" key="GridCell.Tab.0.right/0.20.1920.1060@0.20.1920.1060" timestamp="1576797719239" />
   </component>
 </project>

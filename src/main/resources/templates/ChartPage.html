@@ -10,31 +10,40 @@
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+    <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
     <script src="https://d3js.org/d3.v4.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
     <link rel="stylesheet" href="CSS/ChartPage.css">
+    
     <script th:inline="javascript">
         var datos = [[${ data }]];
     </script>
-    
+
 </head>
 
-<body>
+<body id="Inicio">
     <nav class="navbar sticky-top navbar-expand-lg navbar-dark">
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav mx-auto">
                 <li>
-                    <a class="navbar-brand" href="#">Página Principal</a>
+                    <a class="navbar-brand" href="home">Página Principal</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Anexos <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#Inicio">Filtrar Datos <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Proyecto Smart City In a Box</a>
+                    <a class="nav-link"
+                        href="https://www.ufro.cl/index.php/noticias/12-destacadas/2468-lanzan-proyecto-smartemuco-smart-city-in-a-box">Proyecto
+                        Smart City</a>
                 </li>
             </ul>
         </div>
@@ -50,73 +59,94 @@
                         <h3>Seleccione el rango de tiempo en el que quiere generar el gráfico:</h3>
                     </div>
                     <div class="col-md-4" style="margin-top: 3%">
-                        <select class="select-css" name="FranjaHoraria">
-                            <option>Hora</option>
-                            <option>Día</option>
-                            <option>Semana</option>
-                            <option>Mes</option>
-                            <option>Año</option>
+                        <select class="select-css" name="FranjaHoraria" onchange="mostrarSelecciones(this.value)">
+                            <option value="Hora">Hora</option>
+                            <option value="Dia">Día</option>
+                            <option value="Mes">Mes</option>
+                            <option value="Año">Año</option>
                         </select>
                     </div>
                 </div>
             </div>
             <div class="container-fluid border border-dark rounded "
                 style="padding: 3%; margin-top:2%;background: rgba(34,34,34,0.75);position: relative;">
-                <div class="row " style="margin-left: 8%">
-                    <div class="col-md-2">
-                        <h6>Seleccione el año:</h6>
-                        <select class="select-css" name="SeleccionAño">
-                            <option>Hora</option>
-                            <option>Día</option>
-                            <option>Semana</option>
-                            <option>Mes</option>
-                            <option>Año</option>
-                        </select>
+                <div class="row" id="Horas">
+                    <div class="col" align="center">
+                        <h6>Seleccione la fecha:</h6>
+                        <input id="datepicker" width="276">
                     </div>
-                    <div class="col-md-2">
-                        <h6>Seleccione el mes:</h6>
-                        <select class="select-css" name="SeleccionMes">
-                            <option>Hora</option>
-                            <option>Día</option>
-                            <option>Semana</option>
-                            <option>Mes</option>
-                            <option>Año</option>
-                        </select>
-                    </div>
-                    <div class="col-md-2">
-                        <h6>Seleccione la semana:</h6>
-                        <select class="select-css" name="SeleccionSemana">
-                            <option>Hora</option>
-                            <option>Día</option>
-                            <option>Semana</option>
-                            <option>Mes</option>
-                            <option>Año</option>
-                        </select>
-                    </div>
-                    <div class="col-md-2">
-                        <h6>Seleccione el día:</h6>
-                        <select class="select-css" name="SeleccionDia">
-                            <option>Hora</option>
-                            <option>Día</option>
-                            <option>Semana</option>
-                            <option>Mes</option>
-                            <option>Año</option>
-                        </select>
-                    </div>
-                    <div class="col-md-2">
+                    <div class="col" align="center">
                         <h6>Seleccione la hora:</h6>
                         <select class="select-css" name="SeleccionHora">
-                            <option>Hora</option>
-                            <option>Día</option>
-                            <option>Semana</option>
-                            <option>Mes</option>
-                            <option>Año</option>
+                            <option>00:00:00 - 01:00:00</option>
+                            <option>01:00:00 - 02:00:00</option>
+                            <option>02:00:00 - 03:00:00</option>
+                            <option>03:00:00 - 04:00:00</option>
+                            <option>04:00:00 - 05:00:00</option>
+                            <option>05:00:00 - 06:00:00</option>
+                            <option>06:00:00 - 07:00:00</option>
+                            <option>07:00:00 - 08:00:00</option>
+                            <option>08:00:00 - 09:00:00</option>
+                            <option>09:00:00 - 10:00:00</option>
+                            <option>10:00:00 - 11:00:00</option>
+                            <option>11:00:00 - 12:00:00</option>
+                            <option>12:00:00 - 13:00:00</option>
+                            <option>13:00:00 - 14:00:00</option>
+                            <option>14:00:00 - 15:00:00</option>
+                            <option>15:00:00 - 16:00:00</option>
+                            <option>16:00:00 - 17:00:00</option>
+                            <option>17:00:00 - 18:00:00</option>
+                            <option>18:00:00 - 19:00:00</option>
+                            <option>19:00:00 - 20:00:00</option>
+                            <option>20:00:00 - 21:00:00</option>
+                            <option>21:00:00 - 22:00:00</option>
+                            <option>22:00:00 - 23:00:00</option>
+                            <option>23:00:00 - 00:00:00</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row" style="display: none;" id="Dias">
+                    <div class="col" align="center">
+                        <h6>Seleccione la fecha:</h6>
+                        <input id="datepicker2" width="276">
+                    </div>
+                </div>
+                <div class="row" style="display: none;" id="Meses">
+                    <div class="col" align="center">
+                        <h6>Seleccione el año:</h6>
+                        <select class="select-css" name="SeleccionAño">
+                            <option>2019</option>
+                        </select>
+                    </div>
+                    <div class="col" align="center">
+                        <h6>Seleccione el mes:</h6>
+                        <select class="select-css" name="SeleccionMes">
+                            <option>Enero</option>
+                            <option>Febrero</option>
+                            <option>Marzo</option>
+                            <option>Abril</option>
+                            <option>Mayo</option>
+                            <option>Junio</option>
+                            <option>Julio</option>
+                            <option>Agosto</option>
+                            <option>Septiembre</option>
+                            <option>Octubre</option>
+                            <option>Noviembre</option>
+                            <option>Diciembre</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row" style="display: none;" id="Anios">
+                    <div class="col" align="center">
+                        <h6>Seleccione el año:</h6>
+                        <select class="select-css" name="SeleccionAño">
+                            <option>2019</option>
                         </select>
                     </div>
                 </div>
             </div>
             <div class="button" align="center" style="margin-top: 3%">
-                <a class="btn btn-primary btn-lg btn-dark " style="position: relative;"
+                <a class="btn btn-primary btn-lg btn-dark " style="position: relative;" href="#Grafico"
                     onclick="generarGrafico(datos)">Desplegar Gráfico</a>
             </div>
         </div>
@@ -183,7 +213,7 @@
         <div class="container text-dark">
             <div class="textoAutores" style="padding: 3%" align="center">
                 <ul style="list-style: none;">
-                    <li>¿Quienes Somos?</li>
+                    <li>¿Quiénes Somos?</li>
                     <li>Autores: Rodrigo Pardo, Gilio Linfati y Jonathan Lizama</li>
                     <li>Universidad de la Frontera</li>
                     <li>Departamento de Ciencias e Informática.</li>
@@ -192,15 +222,66 @@
         </div>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+    <script>
+        $("#datepicker").datepicker({
+            uiLibrary: 'bootstrap4'
+        });
+        $("#datepicker2").datepicker({
+            uiLibrary: 'bootstrap4'
+        });
+    </script>
+
+    <script>
+        function mostrarSelecciones(id) {
+
+            if (id == "Hora") {
+            
+                $("#Horas").css("display","flex");
+                $("#Dias").css("display","none");
+                $("#Meses").css("display","none")
+                $("#Anios").css("display","none");
+            }
+            if (id == "Dia") {
+                $("#Horas").css("display","none");
+                $("#Dias").css("display","flex");
+                $("#Meses").css("display","none")
+                $("#Anios").css("display","none");
+            }
+            if (id == "Mes") {
+                $("#Horas").css("display","none");
+                $("#Dias").css("display","none");
+                $("#Meses").css("display","flex")
+                $("#Anios").css("display","none");
+            }
+            if (id == "Año") {
+                $("#Horas").css("display","none");
+                $("#Dias").css("display","none");
+                $("#Meses").css("display","none")
+                $("#Anios").css("display","flex");
+            }
+        }
+    </script>
 
     <script>
         function generarGrafico(datosFinales) {

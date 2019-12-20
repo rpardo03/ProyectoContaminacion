@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="CSS/main.css">
 </head>
 
-<body>
+<body id="Inicio">
     <header>
         <div class="card border-light">
             <img src="img/header.jpg" class="card-img-top" style="position: absolute" height="100%">
@@ -40,17 +40,20 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li>
-                    <a class="navbar-brand" href="#">Página Principal</a>
+                    <a class="navbar-brand" href="#Inicio">Página Principal</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Anexos <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#HerramientaGrafica">Herramienta Gráfica <span
+                            class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Proyecto Smart City In a Box</a>
+                    <a class="nav-link"
+                        href="https://www.ufro.cl/index.php/noticias/12-destacadas/2468-lanzan-proyecto-smartemuco-smart-city-in-a-box">Proyecto
+                        Smart City In a Box</a>
                 </li>
             </ul>
         </div>
@@ -67,13 +70,15 @@
                 <div class="col-md-4">
                     <div class="contenedor-right mt-5 ml-2">
                         <h2>Especificaciones del Proyecto</h2>
-                        <p>Es el proyecto más emblemático que tiene la Universidad de La Frontera en este momento, así lo señaló el Rector,
-                            Eduardo Hebel, en el lanzamiento del proyecto Smartemuco, Smart City in a Box, una iniciativa que pretende hacer de
-                            nuestra capital regional una ciudad más acogedora, moderna y sustentable.</p>
-                        <p>El objetivo del proyecto es contribuir a transformar a Temuco en una ciudad inteligente, a través del desarrollo y
-                            validación de una plataforma digital abierta como soporte tecnológico, que potencie un ecosistema de innovación y
-                            emprendimiento para desarrollar y empaquetar productos y servicios orientados a mejorar la calidad de vida de los
-                            ciudadanos de Temuco”, explicó la gerente de SmartUFRO, Lilian Paredes.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque unde non itaque, architecto
+                            eum explicabo eveniet dignissimos incidunt eius corrupti repellat sint. Quam omnis doloribus
+                            error laboriosam alias? Placeat, omnis.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque unde non itaque, architecto
+                            eum explicabo eveniet dignissimos incidunt eius corrupti repellat sint. Quam omnis doloribus
+                            error laboriosam alias? Placeat, omnis.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque unde non itaque, architecto
+                            eum explicabo eveniet dignissimos incidunt eius corrupti repellat sint. Quam omnis doloribus
+                            error laboriosam alias? Placeat, omnis.</p>
                     </div>
                 </div>
             </div>
@@ -85,14 +90,13 @@
             <div class="row">
                 <div class="col-md-4" style="padding: 2%">
                     <div class="texto">
-                        <h2>Herramienta Gráfica</h2>
-                        <p>D3.js (o simplemente D3 por las siglas de Data-Driven Documents) es una biblioteca (informática) de JavaScript para producir,
-                            a partir de datos, infogramas dinámicos e interactivos en navegadores web.  Hace uso de tecnologías bien sustentadas como SVG,
-                            HTML5, y CSS. Esta biblioteca es sucesora de la biblioteca Protovis. En contraste con muchas otras bibliotecas, D3.js permite
-                            tener control completo sobre el resultado visual final.</p>
-                        <p>Para el desarrollo de este proyecto, nosotros la hemos utilizado para poder generar un treemap en base a los datos obtenidos por
-                            sensores distribuidos en la ciudad de Temuco, los cuáles recoletan información de variables relacionadas a la contaminación 
-                            ambiental, guardada en archivos csv, los que usaremos para la generación del treemap.</p>
+                        <h2>Herramienta gráfica</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque unde non itaque, architecto
+                            eum explicabo eveniet dignissimos incidunt eius corrupti repellat sint. Quam omnis doloribus
+                            error laboriosam alias? Placeat, omnis.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque unde non itaque, architecto
+                            eum explicabo eveniet dignissimos incidunt eius corrupti repellat sint. Quam omnis doloribus
+                            error laboriosam alias? Placeat, omnis.</p>
                     </div>
                     <div class="button" align="center" style="margin-top: 7%">
                         <a class="btn btn-primary btn-lg btn-dark" href="/ChartPage">Ir a Herramienta Gráfica</a>
@@ -129,6 +133,17 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>

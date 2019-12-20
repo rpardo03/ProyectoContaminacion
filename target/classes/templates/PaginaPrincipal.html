@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="CSS/main.css">
 </head>
 
-<body>
+<body id="Inicio">
     <header>
         <div class="card border-light">
             <img src="img/header.jpg" class="card-img-top" style="position: absolute" height="100%">
@@ -40,17 +40,20 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li>
-                    <a class="navbar-brand" href="#">Página Principal</a>
+                    <a class="navbar-brand" href="#Inicio">Página Principal</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Anexos <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#HerramientaGrafica">Herramienta Gráfica <span
+                            class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Proyecto Smart City In a Box</a>
+                    <a class="nav-link"
+                        href="https://www.ufro.cl/index.php/noticias/12-destacadas/2468-lanzan-proyecto-smartemuco-smart-city-in-a-box">Proyecto
+                        Smart City In a Box</a>
                 </li>
             </ul>
         </div>
@@ -130,6 +133,17 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
