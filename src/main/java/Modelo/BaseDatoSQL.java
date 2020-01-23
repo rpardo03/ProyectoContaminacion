@@ -64,7 +64,7 @@ public class BaseDatoSQL {
         try {
             for (int i = 0; i < r.size(); i++) {
                 String sql = "Insert into Registro " + " VALUES (" + r.get(i).getFecha() + "," + r.get(i).getHora() + "," + r.get(i).getPm10() + ","
-                        + r.get(i).getPm25() + "," + r.get(i).getTemperatura() + "," + r.get(i).getHumedad() + r.get(i).getSector() + ")";
+                        + r.get(i).getPm25() + "," + r.get(i).getTemp() + "," + r.get(i).getHum() + r.get(i).getSector() + ")";
                 this.statement.executeUpdate(sql);
                 if (r.get(i).getIdSensor() != idSensor) {
                     if (!comprobarIdSensorAgregado(r.get(i).getIdSensor())) {

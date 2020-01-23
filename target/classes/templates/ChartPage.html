@@ -20,9 +20,7 @@
     <script src="https://unpkg.com/scrollreveal"></script>
     <link rel="stylesheet" href="CSS/ChartPage.css">
     
-    <script th:inline="javascript">
-        var datos = [[${ data }]];
-    </script>
+    
 
 </head>
 
@@ -116,6 +114,7 @@
                         <h6>Seleccione el año:</h6>
                         <select class="select-css" name="SeleccionAño">
                             <option>2019</option>
+                            <option>1999</option>
                         </select>
                     </div>
                     <div class="col" align="center">
@@ -147,7 +146,7 @@
             </div>
             <div class="button" align="center" style="margin-top: 3%">
                 <a class="btn btn-primary btn-lg btn-dark " style="position: relative;" href="#Grafico"
-                    onclick="generarGrafico(datos)">Desplegar Gráfico</a>
+                    onclick="peticionDatosGrafico()">Desplegar Gráfico</a>
             </div>
         </div>
     </section>
@@ -170,6 +169,7 @@
                 <div class="col-md-4  ">
                     <div class="separadores border">
                         <h5>PM 10</h5>
+                        <h5 id="pm10"></h5>
                     </div>
                 </div>
             </div>
@@ -192,11 +192,13 @@
                             <div class="col-md-6 " style="padding: 0%;">
                                 <div class="separador2 border" style="margin-left: 25%;">
                                     <h5>Temperatura</h5>
+                                    <h5 id="temp"></h5>
                                 </div>
                             </div>
                             <div class="col-md-6" style="padding: 0%;">
                                 <div class="separador2 border ">
                                     <h5>Humedad</h5>
+                                    <h5 id="hum"></h5>
                                 </div>
                             </div>
                         </div>
@@ -259,26 +261,43 @@
             
                 $("#Horas").css("display","flex");
                 $("#Dias").css("display","none");
-                $("#Meses").css("display","none")
+                $("#Meses").css("display","none");
                 $("#Anios").css("display","none");
             }
             if (id == "Dia") {
                 $("#Horas").css("display","none");
                 $("#Dias").css("display","flex");
-                $("#Meses").css("display","none")
+                $("#Meses").css("display","none");
                 $("#Anios").css("display","none");
             }
             if (id == "Mes") {
                 $("#Horas").css("display","none");
                 $("#Dias").css("display","none");
-                $("#Meses").css("display","flex")
+                $("#Meses").css("display","flex");
                 $("#Anios").css("display","none");
             }
             if (id == "Año") {
                 $("#Horas").css("display","none");
                 $("#Dias").css("display","none");
-                $("#Meses").css("display","none")
+                $("#Meses").css("display","none");
                 $("#Anios").css("display","flex");
+            }
+        }
+    </script>
+
+    <script>
+        function peticionDatosGrafico() {
+            document.getElementById("treemapContenedor").innerHTML = ''; //clean the div where charge the graphic
+            var fecha = document.getElementById("datepicker2").value;
+            var param = "?fecha="+fecha;
+            var xhttp = new XMLHttpRequest();
+            xhttp.open('GET', '/obtenerDatos'+param, true);
+            xhttp.send();
+            xhttp.onreadystatechange = function(){
+                if (this.readyState == 4 && this.status == 200) {
+                    var datos = JSON.parse(xhttp.response);
+                    generarGrafico(datos);
+                }
             }
         }
     </script>
@@ -301,7 +320,7 @@
 
 
             // Give the data to this cluster layout:
-            var root = d3.hierarchy(datosFinales).sum(function (d) { return d.value }) // Here the size of each leave is given in the 'value' field in input data
+            var root = d3.hierarchy(datosFinales).sum(function (d) { return d.pm25 }) // Here the size of each leave is given in the 'value' field in input data
 
             // Then d3.treemap computes the position of each element of the hierarchy
             d3.treemap()
@@ -330,7 +349,7 @@
                 .attr('width', function (d) { return d.x1 - d.x0; })
                 .attr('height', function (d) { return d.y1 - d.y0; })
                 .style("stroke", "black")
-                .style("fill", function (d) { return color(d.data.name) })
+                .style("fill", function (d) { return color(d.data.sector) })
 
             // and to add the text labels
             svg
@@ -340,7 +359,7 @@
                 .append("text")
                 .attr("x", function (d) { return d.x0 + 5 })    // +10 to adjust position (more right)
                 .attr("y", function (d) { return d.y0 + 20 })    // +20 to adjust position (lower)
-                .text(function (d) { return d.data.name })
+                .text(function (d) { return d.data.sector })
                 .attr("font-size", "25px")
                 .attr("fill", "white")
 
@@ -352,7 +371,7 @@
                 .append("text")
                 .attr("x", function (d) { return d.x0 + 5 })    // +10 to adjust position (more right)
                 .attr("y", function (d) { return d.y0 + 35 })    // +20 to adjust position (lower)
-                .text(function (d) { return d.data.value })
+                .text(function (d) { return d.data.pm25 })
                 .attr("font-size", "22px")
                 .attr("fill", "white")
 
@@ -368,10 +387,16 @@
 
             'use strict';
             d3.selectAll("rect").data(root.leaves()).attr("transition", "all 0.2s ease").on("click", function (d) {
-                var sectorVAR = d.data.name;
-                var pm25VAR = d.data.value;
+                var sectorVAR = d.data.sector;
+                var pm25VAR = d.data.pm25;
+                var pm10VAR = d.data.pm10;
+                var tempVAR = d.data.temp;
+                var humVAR = d.data.hum;
                 document.getElementById("sector").innerHTML = sectorVAR;
                 document.getElementById("pm25").innerHTML = pm25VAR;
+                document.getElementById("pm10").innerHTML = pm10VAR;
+                document.getElementById("temp").innerHTML = tempVAR;
+                document.getElementById("hum").innerHTML = humVAR;
                 d3.select(this).style("transition", "all 0.2s ease");
                 d3.select(this).style("box-shadow", "0 4px 16px rgba(49, 138, 172, 1)");
 

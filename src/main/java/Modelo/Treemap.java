@@ -4,17 +4,17 @@ import java.util.List;
 
 public class Treemap {
 
-    private List<DatoJSON> children;
+    private List<Registro> children;
 
-    public Treemap(List<DatoJSON> registros) {
+    public Treemap(List<Registro> registros) {
         this.children = registros;
     }
 
-    public List<DatoJSON> getChildren() {
+    public List<Registro> getChildren() {
         return children;
     }
 
-    public void setChildren(List<DatoJSON> children) {
+    public void setChildren(List<Registro> children) {
         this.children = children;
     }
 }

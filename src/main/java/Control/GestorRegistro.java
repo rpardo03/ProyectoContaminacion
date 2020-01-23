@@ -2,6 +2,7 @@ package Control;
 
 import Modelo.*;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,76 +11,37 @@ public class GestorRegistro {
     private ArrayList<Registro> registros;
 
     public GestorRegistro() {
+        this.registros = agregarRegistros();
     }
 
-    public GestorRegistro(String ruta) {
-        this.registros = agregarRegistrosNuevos(ruta);
-    }
-
-    private ArrayList<Registro> agregarRegistrosNuevos(String ruta) {
+    private ArrayList<Registro> agregarRegistros() {
         GestorArchivo ga = new GestorArchivo();
-        return ga.agruparRegistrosPorHora(ga.leerArchivo(ruta));
+        return ga.leerDatos("src/archivos/DatosPorDia.csv");
     }
 
-    public boolean buscarDatos(String fecha, String rangoHorario , ArrayList<Registro> datos) {
-        ArrayList<Registro> datosSolicitados = new ArrayList<>();
-        for (int i = 0; i < datos.size(); i++) {
-            if (datos.get(i).getFecha().equals(fecha) && datos.get(i).getHora().equals(rangoHorario)) {
-                datosSolicitados.add(datos.get(i));
-            }
-            return false;
-        }
-        return true;
-    }
-
-    public ArrayList<Registro> buscarDatosSolicitados(String fecha, String rangoHorario) {
-        ArrayList<Registro> datosSolicitados = new ArrayList<>();
-        for (int i = 0; i < registros.size(); i++) {
-            if (registros.get(i).getFecha().equals(fecha) && registros.get(i).getHora().equals(rangoHorario)) {
-                datosSolicitados.add(registros.get(i));
-            }
-        }
-        return datosSolicitados;
-    }
-
-
-    public List<DatoJSON> enviarDatosAlGrafico(ArrayList<Registro> datosParaEnviar) {
-        List<DatoJSON> enviar = new ArrayList<>();
-        for (int i = 0; i < datosParaEnviar.size(); i++) {
-            enviar.add(new DatoJSON(datosParaEnviar.get(i).getSector(), (int) datosParaEnviar.get(i).getPm25()));
-        }
-        return enviar;
-    }
-
-
-    //aun no se usa
-    private ArrayList<Registro> promediarDatosSolicitados() {
-        ArrayList<Registro> datosSolicitados = buscarDatosSolicitados("", "");
-        ArrayList<Registro> datosMismoSector = new ArrayList<>();
-        String sector = datosSolicitados.get(0).getSector();
-        for (int i = 0; i < datosSolicitados.size(); i++) {
-            if (datosSolicitados.get(i).getSector().equals(sector)) {
-                datosMismoSector.add(datosSolicitados.get(i));
+    public ArrayList<Registro> buscarRegistros(LocalDate fecha) {
+        ArrayList<Registro> encontrados = new ArrayList<>();
+        int high = this.registros.size() - 1;
+        int low = 0;
+        int mid;
+        while (low <= high) {
+            mid = (high + low) / 2;
+            if (registros.get(mid).getFecha().compareTo(fecha) < 0) {
+                high = mid - 1;
+            } else if (registros.get(mid).getFecha().compareTo(fecha) > 0) {
+                low = mid + 1;
             } else {
-
+                while ((mid > 0) && registros.get(mid - 1).getFecha().equals(fecha)) {
+                    mid--;
+                }
+                while (mid < registros.size() && registros.get(mid).getFecha().equals(fecha)) {
+                    encontrados.add(registros.get(mid));
+                    mid++;
+                }
+                return encontrados;
             }
         }
-        return datosMismoSector;
-    }
-
-    //aun no se usa
-    private Registro promediarPM(ArrayList<Registro> datos) {
-        double promedio = 0.0;
-        for (int i = 0; i < datos.size(); i++) {
-            promedio += datos.get(i).getPm25();
-        }
-        return new Registro();
-    }
-
-
-    private ArrayList<Registro> ordenarRegistros() {
-        // TODO - implement GestorRegistro.ordenarRegistros
-        throw new UnsupportedOperationException();
+        return null;
     }
 
     public ArrayList<Registro> getRegistros() {
