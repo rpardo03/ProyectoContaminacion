@@ -57,7 +57,7 @@
                         <h3>Seleccione el rango de tiempo en el que quiere generar el gráfico:</h3>
                     </div>
                     <div class="col-md-4" style="margin-top: 3%">
-                        <select class="select-css" name="FranjaHoraria" onchange="mostrarSelecciones(this.value)">
+                        <select class="select-css" name="FranjaHoraria" id="selecciones" onchange="mostrarSelecciones(this.value)">
                             <option value="Hora">Hora</option>
                             <option value="Dia">Día</option>
                             <option value="Mes">Mes</option>
@@ -75,31 +75,31 @@
                     </div>
                     <div class="col" align="center">
                         <h6>Seleccione la hora:</h6>
-                        <select class="select-css" name="SeleccionHora">
-                            <option>00:00:00 - 01:00:00</option>
-                            <option>01:00:00 - 02:00:00</option>
-                            <option>02:00:00 - 03:00:00</option>
-                            <option>03:00:00 - 04:00:00</option>
-                            <option>04:00:00 - 05:00:00</option>
-                            <option>05:00:00 - 06:00:00</option>
-                            <option>06:00:00 - 07:00:00</option>
-                            <option>07:00:00 - 08:00:00</option>
-                            <option>08:00:00 - 09:00:00</option>
-                            <option>09:00:00 - 10:00:00</option>
-                            <option>10:00:00 - 11:00:00</option>
-                            <option>11:00:00 - 12:00:00</option>
-                            <option>12:00:00 - 13:00:00</option>
-                            <option>13:00:00 - 14:00:00</option>
-                            <option>14:00:00 - 15:00:00</option>
-                            <option>15:00:00 - 16:00:00</option>
-                            <option>16:00:00 - 17:00:00</option>
-                            <option>17:00:00 - 18:00:00</option>
-                            <option>18:00:00 - 19:00:00</option>
-                            <option>19:00:00 - 20:00:00</option>
-                            <option>20:00:00 - 21:00:00</option>
-                            <option>21:00:00 - 22:00:00</option>
-                            <option>22:00:00 - 23:00:00</option>
-                            <option>23:00:00 - 00:00:00</option>
+                        <select class="select-css" id="selectHora" name="SeleccionHora">
+                            <option value="00:00:00">00 am - 01 am</option>
+                            <option value="01:00:00">01 am - 02 am</option>
+                            <option value="02:00:00">02 am - 03 am</option>
+                            <option value="03:00:00">03 am - 04 am</option>
+                            <option value="04:00:00">04 am - 05 am</option>
+                            <option value="05:00:00">05 am - 06 am</option>
+                            <option value="06:00:00">06 am - 07 am</option>
+                            <option value="07:00:00">07 am - 08 am</option>
+                            <option value="08:00:00">08 am - 09 am</option>
+                            <option value="09:00:00">09 am - 10 am</option>
+                            <option value="10:00:00">10 am - 11 am</option>
+                            <option value="11:00:00">11 am - 12 pm</option>
+                            <option value="12:00:00">12 pm - 13 pm</option>
+                            <option value="13:00:00">13 pm - 14 pm</option>
+                            <option value="14:00:00">14 pm - 15 pm</option>
+                            <option value="15:00:00">15 pm - 16 pm</option>
+                            <option value="16:00:00">16 pm - 17 pm</option>
+                            <option value="17:00:00">17 pm - 18 pm</option>
+                            <option value="18:00:00">18 pm - 19 pm</option>
+                            <option value="19:00:00">19 pm - 20 pm</option>
+                            <option value="20:00:00">20 pm - 21 pm</option>
+                            <option value="21:00:00">21 pm - 22 pm</option>
+                            <option value="22:00:00">22 pm - 23 pm</option>
+                            <option value="23:00:00">23 pm - 00 am</option>
                         </select>
                     </div>
                 </div>
@@ -112,41 +112,42 @@
                 <div class="row" style="display: none;" id="Meses">
                     <div class="col" align="center">
                         <h6>Seleccione el año:</h6>
-                        <select class="select-css" name="SeleccionAño">
+                        <select class="select-css" name="SeleccionAño" id="selectAnio">
                             <option>2019</option>
                             <option>1999</option>
                         </select>
                     </div>
                     <div class="col" align="center">
                         <h6>Seleccione el mes:</h6>
-                        <select class="select-css" name="SeleccionMes">
-                            <option>Enero</option>
-                            <option>Febrero</option>
-                            <option>Marzo</option>
-                            <option>Abril</option>
-                            <option>Mayo</option>
-                            <option>Junio</option>
-                            <option>Julio</option>
-                            <option>Agosto</option>
-                            <option>Septiembre</option>
-                            <option>Octubre</option>
-                            <option>Noviembre</option>
-                            <option>Diciembre</option>
+                        <select class="select-css" name="SeleccionMes" id="selectMes">
+                            <option value="01">Enero</option>
+                            <option value="02">Febrero</option>
+                            <option value="03">Marzo</option>
+                            <option value="04">Abril</option>
+                            <option value="05">Mayo</option>
+                            <option value="06">Junio</option>
+                            <option value="07">Julio</option>
+                            <option value="08">Agosto</option>
+                            <option value="09">Septiembre</option>
+                            <option value="10">Octubre</option>
+                            <option value="11">Noviembre</option>
+                            <option value="12">Diciembre</option>
                         </select>
                     </div>
                 </div>
                 <div class="row" style="display: none;" id="Anios">
                     <div class="col" align="center">
                         <h6>Seleccione el año:</h6>
-                        <select class="select-css" name="SeleccionAño">
+                        <select class="select-css" name="SeleccionAño" id="selectAnio2">
                             <option>2019</option>
+                            <option>1999</option>
                         </select>
                     </div>
                 </div>
             </div>
             <div class="button" align="center" style="margin-top: 3%">
                 <a class="btn btn-primary btn-lg btn-dark " style="position: relative;" href="#Grafico"
-                    onclick="peticionDatosGrafico()">Desplegar Gráfico</a>
+                    onclick="hacerPeticion(generarURL(document.getElementById('selecciones').value))">Desplegar Gráfico</a>
             </div>
         </div>
     </section>
@@ -286,20 +287,39 @@
     </script>
 
     <script>
-        function peticionDatosGrafico() {
-            document.getElementById("treemapContenedor").innerHTML = ''; //clean the div where charge the graphic
-            var fecha = document.getElementById("datepicker2").value;
-            var param = "?fecha="+fecha;
-            var xhttp = new XMLHttpRequest();
-            xhttp.open('GET', '/obtenerDatos'+param, true);
-            xhttp.send();
-            xhttp.onreadystatechange = function(){
-                if (this.readyState == 4 && this.status == 200) {
-                    var datos = JSON.parse(xhttp.response);
-                    generarGrafico(datos);
-                }
-            }
+    function generarURL(Datevalue) {
+      var fecha;
+      var url;
+      if (Datevalue == "Hora") {
+        fecha = document.getElementById("datepicker").value;
+        var hora = document.getElementById("selectHora").value;
+        return (url = "/obtenerDatosHora?fecha=" + fecha + "&hora=" + hora);
+      } else if (Datevalue == "Dia") {
+        fecha = document.getElementById("datepicker2").value;
+        return (url = "/obtenerDatosDia?fecha=" + fecha);
+      } else if (Datevalue == "Mes") {
+        fecha = document.getElementById("selectMes").value +"/18/" + document.getElementById("selectAnio").value;
+        return (url = "/obtenerDatosMes?mes=" + fecha);
+      } else {
+        fecha = document.getElementById("selectAnio2").value;
+        return (url = "/obtenerDatosAnio?anio=12/08/" + fecha);
+      }
+    }
+    </script>
+
+    <script>
+    function hacerPeticion(url) {
+      document.getElementById("treemapContenedor").innerHTML = '';  
+      var xhttp = new XMLHttpRequest();
+      xhttp.open("GET", url, true);
+      xhttp.send();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          var datos = JSON.parse(xhttp.response);
+          generarGrafico(datos);
         }
+      }
+    }
     </script>
 
     <script>
@@ -379,9 +399,10 @@
             // Add title for the 3 groups
             svg
                 .append("text")
+                .data(root.leaves())
                 .attr("x", 0)
                 .attr("y", 14)    // +20 to adjust position (lower)
-                .text("Sectores registrados en la fecha:08-01-2019")
+                .text(function(d) { return "Sectores registrados en la fecha:"+ d.data.fecha})
                 .attr("font-size", "19px")
                 .attr("fill", "grey")
 
