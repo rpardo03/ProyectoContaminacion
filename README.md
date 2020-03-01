@@ -20,7 +20,7 @@ Visual Paradigm (VP) --> Usado para creación del diagrama de clases y casos de 
 ```
 
 
-## Instrucciones de ejecucción 🛠️
+## Instrucciones de ejecucción 📄
 
 ```bash
 Para poder ejecutar el programa una vez instalados los programas requeridos, se va a la carpeta principal del 
