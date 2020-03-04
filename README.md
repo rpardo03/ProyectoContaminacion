@@ -1,10 +1,7 @@
 # Sistema de Visualización de Datos de Contaminación Ambiental
 
-Sistema de Visualización de Datos de Contaminación Ambiental es el nombre de un proyecto que busca dar solución a la problemática presentada a continuación: ¿cuál es la cantidad de concentración de contaminación por hora, día, mes y año?
+![image](https://user-images.githubusercontent.com/43256414/75900967-8d3e7f80-5e1c-11ea-9055-64c50543a1a7.png)
 
-Para poder solucionar esto, se plantea la creación de una página web que se encargará de mostrar los datos, ya previamente almacenados en archivos, en un gráfico (Treemap,) mediante filtros, los cuáles tendrá que definir el usuario según la forma en que desea visualizar la información presente.
-
-![image](https://user-images.githubusercontent.com/43256414/75899560-739c3880-5e1a-11ea-91c4-218a597e4e0f.png)
 
 ## Pre-requisitos 📋
 
