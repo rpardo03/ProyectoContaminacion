@@ -4,6 +4,8 @@ Sistema de Visualización de Datos de Contaminación Ambiental es el nombre de u
 
 Para poder solucionar esto, se plantea la creación de una página web que se encargará de mostrar los datos, ya previamente almacenados en archivos, en un gráfico (Treemap,) mediante filtros, los cuáles tendrá que definir el usuario según la forma en que desea visualizar la información presente.
 
+![image](https://user-images.githubusercontent.com/43256414/75899560-739c3880-5e1a-11ea-91c4-218a597e4e0f.png)
+
 ## Pre-requisitos 📋
 
 
