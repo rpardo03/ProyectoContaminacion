@@ -19,7 +19,7 @@ Visual Paradigm (VP) --> Usado para creación del diagrama de clases y casos de 
 
 ```
 
-## Tecnologías usadas usadas 🛠️
+## Tecnologías usadas 🛠️
 
 ```bash
 Java
