@@ -94,10 +94,10 @@ public class GestorArchivo {
         r.setIdSensor(Integer.parseInt(atributos[1]));
         r.setFecha(LocalDate.parse(atributos[2], DateTimeFormatter.ofPattern("dd-MM-yyyy")));
         r.setHora(LocalTime.parse(atributos[3]));
-        r.setPm10(Double.parseDouble(atributos[4]));
-        r.setPm25(Double.parseDouble(atributos[5]));
-        r.setHum(Double.parseDouble(atributos[6]));
-        r.setTemp(Double.parseDouble(atributos[7]));
+        r.setPm10(Math.floor((Double.parseDouble(atributos[4])) * 100) / 100);
+        r.setPm25(Math.floor((Double.parseDouble(atributos[5])) * 100) / 100);
+        r.setHum(Math.floor((Double.parseDouble(atributos[6])) * 100) / 100);
+        r.setTemp(Math.floor((Double.parseDouble(atributos[7])) * 100) / 100);
         return r;
     }
 

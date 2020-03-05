@@ -67,7 +67,7 @@ public class GestorRegistro {
                     mid--;
                 }
                 while (mid < regHora.size() && regHora.get(mid).getFecha().equals(fecha)) {
-                    if(regHora.get(mid).getHora().getHour() == hora.getHour()){
+                    if (regHora.get(mid).getHora().getHour() == hora.getHour()) {
                         encontrados.add(regHora.get(mid));
                     }
                     mid++;

@@ -12,6 +12,7 @@ import java.util.List;
 @RestController
 public class ControladorPeticion {
 
+
     private GestorRegistro gr = new GestorRegistro();
 
     @RequestMapping(value = "/obtenerDatosHora", method = RequestMethod.GET)

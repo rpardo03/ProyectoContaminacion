@@ -20,6 +20,7 @@ public class BaseDatoSQL {
         this.contrasenia = "";
     }
 
+
     private void establecerConexion() {
         try {
             Class.forName(this.driver_JDBC);
